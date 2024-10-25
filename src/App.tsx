@@ -1,13 +1,19 @@
-import { useState } from 'react'
 import './App.css'
-import SessionManager from './components/SessionManager'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import Root from "./routes/root";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Root />,
+  }
+])
 
 function App() {
   return (
     <>
       <div className="card">
-        <h1>Testing to see if this shows on browser</h1>
-          <SessionManager />
+        <RouterProvider router={router} />
       </div>
     </>
   )

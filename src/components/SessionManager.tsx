@@ -5,12 +5,11 @@ import LogoutButton from './LogoutButton';
 import Profile from './Profile'
 
 const SessionManager = () => {
-  const {isLoading, isAuthenticated, error} = useAuth0();
+  const { isLoading, isAuthenticated, error } = useAuth0();
 
-  console.log(useAuth0())
   if (isLoading) {
-      return <div>Loading...</div>;
-    }
+    return <div>Loading...</div>;
+  }
   if (error) {
     console.log(error)
     return <div>Oops... {error.message}</div>;
