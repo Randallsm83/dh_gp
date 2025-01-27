@@ -1,8 +1,19 @@
 const express = require('express');
 const sqlite3 = require('sqlite3').verbose();
 const cors = require('cors');
-
 const app = express();
+const { auth } = require('express-oauth2-jwt-bearer');
+const { requiredScopes } = require('express-oauth2-jwt-bearer');
+
+const checkJwt = auth({
+    audience: 'YOUR_API_IDENTIFIER', // Must match your Auth0 API identifier
+    issuerBaseURL: 'https://YOUR_AUTH0_DOMAIN/', // e.g., https://dev-xyz.us.auth0.com/
+  });
+
+  app.get('/api/protected', checkJwt, (req, res) => {
+    res.json({ message: 'This is a protected route!' });
+  });
+
 app.use(cors());
 app.use(express.json());
 
