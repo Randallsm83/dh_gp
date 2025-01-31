@@ -9,10 +9,13 @@ import HomeIcon from '@mui/icons-material/Home';
 import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
 import ConstructionIcon from '@mui/icons-material/Construction';
 import ExploreIcon from '@mui/icons-material/Explore';
-import HardwareIcon from '@mui/icons-material/Hardware';
+import { faPersonDigging } from '@fortawesome/free-solid-svg-icons';
 import SportsKabaddiIcon from '@mui/icons-material/SportsKabaddi';
 import NaturePeopleIcon from '@mui/icons-material/NaturePeople';
 import PaletteIcon from '@mui/icons-material/Palette';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faDiscord } from '@fortawesome/free-brands-svg-icons';
+import { faFish } from '@fortawesome/free-solid-svg-icons';
 
 const drawerWidth = 240;
 
@@ -39,11 +42,13 @@ const menuItems = [
   { text: 'Home', icon: <HomeIcon />, path: '/' },
   { text: 'Calendar', icon: <CalendarTodayIcon />, path: '/calendar' },
   { text: 'Crafting', icon: <ConstructionIcon />, path: '/crafting' },
-  { text: 'Deep', icon: <ExploreIcon />, path: '/deep' },
-  { text: 'FieldEx', icon: <NaturePeopleIcon />, path: '/fieldex' },
+  { text: 'Deep Dungeons', icon: <ExploreIcon />, path: '/deep' },
+  { text: 'Field Exploration', icon: <NaturePeopleIcon />, path: '/fieldex' },
   { text: 'Fights', icon: <SportsKabaddiIcon />, path: '/fights' },
-  { text: 'Gathering', icon: <HardwareIcon />, path: '/gathering' },
+  { text: 'Gathering', icon: <FontAwesomeIcon icon={faPersonDigging} />, path: '/gathering' },
   { text: 'Glamour', icon: <PaletteIcon  />, path: '/glamour' },
+  { text: 'Discord', icon: <FontAwesomeIcon icon={faDiscord} />, path: '/discord' },
+  { text: 'Fishing', icon: <FontAwesomeIcon icon={faFish} />, path: '/fishing' },
 ];
 
 interface LayoutProps {

@@ -10,6 +10,8 @@ import Fights from '../components/Fights';
 import Gathering from '../components/Gathering';
 import Glamour from '../components/Glamour';
 import { Routes, Route } from 'react-router-dom';
+import Discord from "../components/Discord";
+import Fishing from "../components/Fishing";
 
 export default function Root() {
   const { isAuthenticated, isLoading } = useAuth0();
@@ -42,6 +44,8 @@ export default function Root() {
         <Route path="/fights" element={<Fights />} />
         <Route path="/gathering" element={<Gathering />} />
         <Route path="/glamour" element={<Glamour />} />
+        <Route path="/discord" element={<Discord />}/>
+        <Route path="/fishing" element={<Fishing />} />
       </Routes>
     </Layout>
   );
